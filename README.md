@@ -1,4 +1,6 @@
 # PaintingCompositionTool
+<img src="/examples/v1/PCT.gif" alt="Alt text" title="Optional title">
+
 This is really just for fun... but I wondered if I could make a tool to develop new compositions for paintings that I have been creating.
 
 Here are a few early examples:
