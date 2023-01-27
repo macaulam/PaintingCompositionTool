@@ -5,17 +5,17 @@ Here are a few early examples:
 
 <img src="/examples/v1/PCT 1.jpg" alt="Alt text" title="Optional title">
 
-<img src="PCT 2.jpg" alt="Alt text" title="Optional title">
+<img src="/examples/v1/PCT 2.jpg" alt="Alt text" title="Optional title">
 
-<img src="PCT 3.jpg" alt="Alt text" title="Optional title">
+<img src="/examples/v1/PCT 3.jpg" alt="Alt text" title="Optional title">
 
-<img src="PCT 4.jpg" alt="Alt text" title="Optional title">
+<img src="/examples/v1/PCT 4.jpg" alt="Alt text" title="Optional title">
 
-<img src="PCT 5.jpg" alt="Alt text" title="Optional title">
+<img src="/examples/v1/PCT 5.jpg" alt="Alt text" title="Optional title">
 
-<img src="PCT 6.jpg" alt="Alt text" title="Optional title">
+<img src="/examples/v1/PCT 6.jpg" alt="Alt text" title="Optional title">
 
-<img src="PCT 7.jpg" alt="Alt text" title="Optional title">
+<img src="/examples/v1/PCT 7.jpg" alt="Alt text" title="Optional title">
 
 
 
