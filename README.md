@@ -3,7 +3,7 @@ This is really just for fun... but I wondered if I could make a tool to develop 
 
 Here are a few early examples:
 
-<img src="./example/v1/PCT 1.jpg" alt="Alt text" title="Optional title">
+<img src="/examples/v1/PCT 1.jpg" alt="Alt text" title="Optional title">
 
 <img src="PCT 2.jpg" alt="Alt text" title="Optional title">
 
