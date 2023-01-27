@@ -1,5 +1,5 @@
 # PaintingCompositionTool
-<img src="/examples/v1/PCT.gif" alt="Alt text" title="Optional title">
+<img src="/examples/v1/PCT 2.gif" alt="Alt text" title="Optional title">
 
 ## This repository contains an application that generates random compositional structures and color combinations for paintings. The app aims to provide users with new ideas for the strucutres of my paintings, breaking me out of habitual patterns and encouraging experimentation with different color schemes and compositions.
 
