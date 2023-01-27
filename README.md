@@ -5,7 +5,7 @@
 
 ## The application uses probability to change the color combinations and compositional structures it generates. It uses probability to decide which colors will be used in a given composition, or to decide on the placement of elements within the painting. By using probability, the application is able to create a wide range of different combinations, and ensure that each one is visually pleasing and well-balanced. Additionally, the application uses probability to give a chance for certain color combinations or composition structures to be generated more frequently than others, depending on the user preferences.
 
-Here are a few early examples:
+## Here are a few early examples:
 
 <img src="/examples/v1/PCT 1.jpg" alt="Alt text" title="Optional title">
 
@@ -23,4 +23,4 @@ Here are a few early examples:
 
 
 
-Thanks to Roni Kaufman (https://github.com/ronikaufman) for the starter code.
+Thanks to Roni Kaufman (https://github.com/ronikaufman) for the starter code, and Marc Vaux for letting me see how he uses software to choose colours for his artworks.
