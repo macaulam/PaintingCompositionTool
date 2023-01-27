@@ -1,15 +1,14 @@
-// By Matthew Macaulay thanks to Roni Kaufman for the initial code that this was based on.
+// PCT By Matthew Macaulay
 
-int thickness = 0; // thickness of the lines between the cubes
+int thickness = 0; 
 
-int[][] colors = {{215, 85, 56}, {240, 0, 0}, {0, 0, 92}, {36, 15, 88}, {220, 60, 100}}; // colors used, including black and white
-int nbColors = colors.length; // number of colors
-float[] probColors = new float[5]; // probabilities of applying each color to a rectangle, the sum of its elements must be equal to 1.0
-float[] startingProbColors = {0.01, 0.81, 0.06, 0.06, 0.06}; // starting probabilities
-float[] probReducingColors = {0.8, 0.1, 0.5, 0.5, 0.5}; // gives how the probabilities for each color evolve every time we use them (the closest to 1, the more we'll reduce)
+int[][] colors = {{60, 20, 100}, {84, 250, 167}, {197, 241, 8}, {24, 244, 204}, {0, 50, 0}, {255, 0, 0}, {255, 255, 0}, {0, 0, 255}, {255, 0, 255}, {100, 100, 100}, {255, 150, 0}, {150, 0, 255}, {255, 255, 255}, {0, 0, 0}, {200, 200, 200}, {255, 100, 0}, {100, 0, 255}, {150, 150, 150}, {255, 200, 0}, {200, 0, 255}, {255, 0, 0}, {255, 0, 255}, {0, 0, 255}, {0,255,255}, {255, 255, 0}, {0, 255, 0}, {255, 0, 255}, {255,255,255}, {0, 0, 0}, {200, 200, 200}, {255, 100, 0}, {100, 0, 255}, {150, 150, 150}, {255, 200, 0}, {200, 0, 255}};
+int nbColors = colors.length; 
+float[] probColors = new float[40]; 
+float[] startingProbColors = {0.06, 0.06, 0.06, 0.06, 0.06, 0.06, 0.6, 0.06, 0.06, 0.06, 0.06, 0.6, 0.06, 0.06, 0.06, 0.06, 0.6, 0.06, 0.06, 0.06, 0.06, 0.6, 0.06, 0.06, 0.6, 0.06, 0.06, 0.6, 0.06, 0.06, 0.6, 0.06, 0.06, 0.6, 0.06, 0.06, 0.6, 0.06, 0.06, 0.06};
+float[] probReducingColors = {0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1};
 
-float probFactor = 0.5; // factor to multiply the probability of division with when we call the function mondrianRecursion recursively
-
+float probFactor = 0.5;
 
 void setup() {
   size(1200, 800);
@@ -20,7 +19,7 @@ void setup() {
 
 void draw() {
   background(0);
-  mondrianRecursion(width-thickness, height-thickness, thickness/1, thickness/2, 1.0, (random(2)<1));
+  recursion(width-thickness, height-thickness, thickness/1, thickness/2, 1.0, (random(2)<1));
 } 
 
 
@@ -35,21 +34,21 @@ void keyPressed() {
 }
 
 
-/* Draws a generated Mondrian-style picture recursively
+/* Draws a generated grid recursively
    w the width, h the height, (x,y) the top-left corner
    prob the probability to divide this rectangle into 2 new rectangles
    vertical = true if we must divide vertically, false if horizontally */
 
-void mondrianRecursion(int w, int h, int x, int y, float prob, boolean vertical) {
+void recursion(int w, int h, int x, int y, float prob, boolean vertical) {
   if (random(1) < prob) { // we must divide again
     if (vertical) {
       int wDivision = (int)(random(w*0.3, w*0.7));
-      mondrianRecursion(wDivision, h, x, y, prob*probFactor, false);
-      mondrianRecursion(w-wDivision, h, x+wDivision, y, prob*probFactor, false);
+      recursion(wDivision, h, x, y, prob*probFactor, false);
+      recursion(w-wDivision, h, x+wDivision, y, prob*probFactor, false);
     } else {
       int hDivision = (int)(random(h*0.3, h*0.7));
-      mondrianRecursion(w, hDivision, x, y, prob*probFactor, true);
-      mondrianRecursion(w, h-hDivision, x, y+hDivision, prob*probFactor, true);
+      recursion(w, hDivision, x, y, prob*probFactor, true);
+      recursion(w, h-hDivision, x, y+hDivision, prob*probFactor, true);
     }
   } else { // we must draw a rectangle in the zone
     int idx = chooseColor();
