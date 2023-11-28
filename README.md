@@ -23,4 +23,3 @@
 
 
 
-Thanks to Roni Kaufman (https://github.com/ronikaufman) for the starter code, and Marc Vaux for letting me into his studio to see how he uses software to choose colours for his artworks.
